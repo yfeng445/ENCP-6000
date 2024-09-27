@@ -17,11 +17,11 @@ Take the Adjusted Close of your stock, calculate its mean, variance, skewness an
 
 Take "Adj Close" column as your target and replicate 
 
-### @Yulun Feng
+### @Xiaobin Wang
 
 (1) the mixture modeling technique to approximate the empirical distribution using normal distributions as the component distribution
 
-### @Xiaobin Wang
+### @Yulun Feng
 
 (2) bootstrap analysis to find the 95% confidence interval of the mean estimates 
 
