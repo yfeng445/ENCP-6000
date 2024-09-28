@@ -67,8 +67,6 @@ Autonomous Vehicles: Steady growth in the automotive sector with the DRIVE platf
   Highlight major market-moving events (e.g., earnings, product launches).
 
 
-Take "Adj Close" column as your target and replicate 
-
 ### Slide 4: Mixture Modeling (@xiaobinwang0)
 
 - the mixture modeling technique to approximate the empirical distribution using normal distributions as the component distribution
