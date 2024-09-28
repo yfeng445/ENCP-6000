@@ -11,16 +11,17 @@ Professional Visualization: $1.47 billion (5.4%
 Automotive: $0.903 billion (3.3%)
 OEM and Others: $1.06 billion (4.1%)
 
-[Reference](https://s201.q4cdn.com/141608511/files/doc_financials/2024/ar/NVIDIA-2024-Annual-Report.pdf)
-  
 - **Business outlook:**  
 AI Growth: Significant investments in AI capabilities for data centers and cloud computing.
 Partnerships: Continued expansion with cloud providers like Amazon Web Services (AWS), Google Cloud, and Microsoft Azure.
 Autonomous Vehicles: Steady growth in the automotive sector with the DRIVE platform for autonomous vehicle technology.
 
+[Reference](https://s201.q4cdn.com/141608511/files/doc_financials/2024/ar/NVIDIA-2024-Annual-Report.pdf)
+
 ## Slide 2: Competitor Business Overview (Comparison)
 
 - **Competitors:**  
+
 ***Advanced Micro Devices, Inc. (AMD):*** A semiconductor company that designs and produces CPUs, GPUs, and other computing products for gaming, data centers, and professional visualization.
 
 ***Intel Corporation (INTC):*** A global leader in semiconductor manufacturing, best known for its processors used in computers, data centers, and networking technologies.
