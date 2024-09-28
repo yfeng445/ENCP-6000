@@ -14,12 +14,11 @@ Visualize the stock price history (open, close, high, low, volume) from Jan 1, 2
 NVIDIA is a leading technology company specializing in graphics processing units (GPUs) for gaming, professional visualization, and AI applications, while also providing solutions for data centers and autonomous vehicle technologies. Its products are central to industries like AI, cloud computing, and autonomous driving.
   
 - **Major business lines & profit engine (in 2024):**  
-Gaming: $8.52 billion (31.6%)
-Data Centers: $15.01 billion (55.6%)
-Professional Visualization: $1.47 billion (5.4%
-)
-Automotive: $0.903 billion (3.3%)
-OEM and Others: $1.06 billion (4.1%)
+  - Gaming: $8.52 billion (31.6%)
+  - Data Centers: $15.01 billion (55.6%)
+  - Professional Visualization: $1.47 billion (5.4%)
+  - Automotive: $0.903 billion (3.3%)
+  - OEM and Others: $1.06 billion (4.1%)
 
 - **Business outlook:**  
 AI Growth: Significant investments in AI capabilities for data centers and cloud computing.
