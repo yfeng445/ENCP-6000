@@ -73,12 +73,40 @@ Take "Adj Close" column as your target and replicate
 
 - the mixture modeling technique to approximate the empirical distribution using normal distributions as the component distribution
 
-### Bootstrap Analysis (@yfeng445)
+- **Key metrics:**  
+  Present **mean, variance, skewness, kurtosis** for NVDA's Adjusted Close.
+  
+- **Density plot:**  
+  Show the **kernel density plot** of NVDA's Adjusted Close.
+
+### Slide 5: Bootstrap Analysis (@yfeng445)
 
 - bootstrap analysis to find the 95% confidence interval of the mean estimates 
 
-### Monte Carlo Simulation (@monica00zhang)
+- **Comparison:**  
+  Present the same metrics (mean, variance, skewness, kurtosis) for competitors in a **table**:
 
-- Monte-Carlo analysis to simulate 1000 paths using five key parameters so as to mimic the empirical distribution of your stock.   
+  | Company | Mean  | Variance | Skewness | Kurtosis |
+  |---------|-------|----------|----------|----------|
+  | NVDA    |       |          |          |          |
+  | INTC    |       |          |          |          |
+  | AMD     |       |          |          |          |
+  | QCOM    |       |          |          |          |
+  | AAPL    |       |          |          |          |
+  | AVGO    |       |          |          |          |
 
-### Conclusion and Takeaways (@whoever is fine)###
+- **Density comparison:**  
+  Show **kernel density estimates** for each competitor alongside NVDA.
+
+### Slide 6: Monte Carlo Simulation (@monica00zhang)
+
+- Monte-Carlo analysis to simulate 1000 paths using five key parameters so as to mimic the empirical distribution of your stock.
+
+### Slide 7: Conclusion and Takeaways (@whoever)###
+
+- **Business & stock performance comparison:**  
+  Summarize **NVIDIA's business strength** vs competitors and **stock performance**.
+
+- **Key insights from statistics:**  
+  Conclude with a summary of **statistical analysis** and insights on stock behavior.
+
