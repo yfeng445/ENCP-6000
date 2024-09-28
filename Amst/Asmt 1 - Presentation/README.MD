@@ -33,17 +33,17 @@ Autonomous Vehicles: Steady growth in the automotive sector with the DRIVE platf
 
 - **Competitors:**  
 
-***Advanced Micro Devices, Inc. (AMD):*** A semiconductor company that designs and produces CPUs, GPUs, and other computing products for gaming, data centers, and professional visualization.
+  - ***Advanced Micro Devices, Inc. (AMD):*** A semiconductor company that designs and produces CPUs, GPUs, and other computing products for gaming, data centers, and professional visualization.
 
-***Intel Corporation (INTC):*** A global leader in semiconductor manufacturing, best known for its processors used in computers, data centers, and networking technologies.
+  - ***Intel Corporation (INTC):*** A global leader in semiconductor manufacturing, best known for its processors used in computers, data centers, and networking technologies.
 
-***Qualcomm Incorporated (QCOM):*** A leading provider of wireless telecommunications products and services, specializing in semiconductors and software for mobile phones and network infrastructure.
+  - ***Qualcomm Incorporated (QCOM):*** A leading provider of wireless telecommunications products and services, specializing in semiconductors and software for mobile phones and network infrastructure.
 
-***Apple Inc. (AAPL):*** A multinational technology company known for designing and manufacturing consumer electronics, software, and services, including the iPhone, iPad, Mac, and various digital services.
+  - ***Apple Inc. (AAPL):*** A multinational technology company known for designing and manufacturing consumer electronics, software, and services, including the iPhone, iPad, Mac, and various digital services.
 
-***Broadcom Inc. (AVGO):*** A global technology company that designs, develops, and supplies semiconductor and infrastructure software products for networking, broadband, and wireless communications.
-  
-- **Business lines comparison Table:**  
+  - ***Broadcom Inc. (AVGO):*** A global technology company that designs, develops, and supplies semiconductor and infrastructure software products for networking, broadband, and wireless communications.
+    
+**Business lines comparison Table:**  
 
 | Company   | Gaming | Data Center | Automotive | AI/Cloud | Business to Consumer |
 |-----------|--------|-------------|------------|----------|----------------------|
