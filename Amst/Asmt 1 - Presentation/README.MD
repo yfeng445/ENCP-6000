@@ -99,6 +99,19 @@ Autonomous Vehicles: Steady growth in the automotive sector with the DRIVE platf
 
 - Monte-Carlo analysis to simulate 1000 paths using five key parameters so as to mimic the empirical distribution of your stock.
 
+- **Comparison:**  
+  Present the best parameters (mu_1, sigma1, mu_2, sigma2, p) for competitors in a **table**:
+
+  | Company |  mu_1 |  sigma1  |   mu_2   |  sigma2  |     p    |
+  |---------|-------|----------|----------|----------|----------|
+  | NVDA    |       |          |          |          |          |
+  | INTC    |       |          |          |          |          |
+  | AMD     |       |          |          |          |          |
+  | QCOM    |       |          |          |          |          |
+  | AAPL    |       |          |          |          |          |
+  | AVGO    |       |          |          |          |          |
+
+
 ### Slide 7: Conclusion and Takeaways (@whoever)###
 
 - **Business & stock performance comparison:**  
