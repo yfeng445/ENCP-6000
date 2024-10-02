@@ -1,4 +1,5 @@
 # [Google Collab](https://colab.research.google.com/drive/1Aa2PaC2Zp0AW0H1KwWM_2R3f83hDVpLT#scrollTo=_gQ2FYfR37g7)
+# [Google Slides](https://docs.google.com/presentation/d/1PqXja79OH6gbf2p_oupozT0n-4EYOMeA/)
 # Roles:
 
 ### Slide 1: Overview (@Zzckin)
