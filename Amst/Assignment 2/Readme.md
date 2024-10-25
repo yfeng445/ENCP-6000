@@ -11,7 +11,7 @@ Third, you may combine the insights from GARCH/Kalman Filter models and technica
 
 ## Breakdown
 
-#### 1. Intro & Summary & Statistical Models for Stock Prediction (2 people)
+#### 1. Intro & Summary & Statistical Models for Stock Prediction (@xiaobinwang0, @Zzckin)
 For each stock in the dataset, apply two statistical models to predict stock prices:
 
 - **GARCH Model**:
@@ -23,7 +23,7 @@ For each stock in the dataset, apply two statistical models to predict stock pri
 - **Performance Metrics**:
 - Report the **Root Mean Square Error (RMSE)** to evaluate the accuracy of the models.
 
-#### 2. Technical Analysis for Understanding Trends (1 people)
+#### 2. Technical Analysis for Understanding Trends (@monica00zhang)
 To enhance your understanding of the stock data, apply the following technical analysis indicators:
 
 - **Trend Identification**:
@@ -33,7 +33,7 @@ To enhance your understanding of the stock data, apply the following technical a
 - **Buying/Selling Pressure**:
   - Analyze **On-Balance Volume (OBV)** to assess the pressure of buying or selling activity.
   
-#### 3. Trade Pattern Identification (1 people)
+#### 3. Trade Pattern Identification (@MenggeLuo)
 - **Candlestick Chart Patterns**:
   - Interpret market conditions using common candlestick patterns such as:
     - **Doji**
@@ -41,7 +41,7 @@ To enhance your understanding of the stock data, apply the following technical a
     - **Hanging Man**
     - **Bullish/Bearish Engulfing**
 
-#### 4. Integration of Insights (2 people)
+#### 4. Integration of Insights (@yfeng445, @liyueyueli)
 Combine the insights from both statistical models (GARCH and Kalman Filter) and technical analysis to:
 
 - Make informed interpretations of your **prediction results**.
