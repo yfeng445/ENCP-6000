@@ -44,7 +44,7 @@ To enhance your understanding of the stock data, apply the following technical a
 #### 4. Integration of Insights (@yfeng445, @liyueyueli)
 Combine the insights from both statistical models (GARCH and Kalman Filter) and technical analysis to:
 
-- Make informed interpretations of your **prediction results**.
-- Explore basic **stock market analysis** based on the combined insights from statistical and technical indicators.
+- Build Mean Reversion Strategy model based on Garch + Kalman Filter, and test with Diebold-Mariano and Augmented Dickey-Fuller test (explain why we're using these method and testing technique)
+- Integrate Relative Strength Index with candlestick pattern
 
 
