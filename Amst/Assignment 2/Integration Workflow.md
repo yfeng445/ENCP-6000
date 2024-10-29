@@ -34,10 +34,9 @@
   - Non-stationary Series: Enhance with a moving average (MA) component or trend-following mechanism.
 - **Stochastic Mean Reversion**: Consider a shifting mean with a Kalman Filter drift term if the trend is prominent.
 
-## 5. Predictive Accuracy Testing with Diebold-Mariano (DM) and Harvey-Leybourne-Newbold (HLN) Tests
+## 5. Predictive Accuracy Testing with Diebold-Mariano (D) and Harvey-Leybourne-Newbold (HLN) Tests
 - **Diebold-Mariano Test**: Use DM to compare forecasting performance of non-nested models.
-- **Harvey-Leybourne-Newbold Test**: Apply HLN for nested models (e.g., GARCH vs. GJR-GARCH).
-- **Alternative Models**: If poor performance is noted, consider Bayesian GARCH or adding exogenous variables to capture market factors.
+
 
 ## 6. Relative Strength Index (RSI) and Candlestick Patterns Integration
 - **Conditional RSI Application**: Apply RSI in periods of low volatility to avoid excessive noise in high volatility phases.
