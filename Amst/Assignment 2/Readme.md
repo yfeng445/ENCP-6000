@@ -41,14 +41,6 @@ To enhance your understanding of the stock data, apply the following technical a
     - **Hanging Man**
     - **Bullish/Bearish Engulfing**
 
-#### 4. Integration of Insights (@yfeng445, @liyueyueli)
-Combine the insights from both statistical models (GARCH and Kalman Filter) and technical analysis to:
-
-- Determine the stationary using ADF and KPSS test if the stock price is stationary (or random walk), build a pipeline as a step of preprocessing.
-- Calculate the degree of freedom and kurtosis, determine which garch model to use. (garch/garch-t/garch-mixture)
-- Calculate the distribution: Gaussian => Kalman filter, non-Gaussian => Particle Filter
-- Build Mean Reversion Strategy model based on Garch and Kalman Filter, garch model works best with stationary time series, MA works good for non-stationary case.
-- Test the model with Diebold-Mariano test. (predictive accuracy)
-- Integrate Relative Strength Index with candlestick pattern.
-
-
+- compare it with actual price, make audience engage with the actual price
+- present the idea, but not the code and result.
+- 
