@@ -41,6 +41,6 @@ To enhance your understanding of the stock data, apply the following technical a
     - **Hanging Man**
     - **Bullish/Bearish Engulfing**
 
+#### 4. Integration of Insights (@yfeng445, @liyueyueli)
 - compare it with actual price, make audience engage with the actual price
 - present the idea, but not the code and result.
-- 
