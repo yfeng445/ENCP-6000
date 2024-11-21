@@ -1,6 +1,6 @@
 ### Guideline
 
-The assessment focuses on how well you could master the data science tools we covered to serve your quantitative analysis purpose. Each team wants to prepare a **30-min** presentation that covers both the source code and slides.  
+The assessment focuses on how well you could master the data science tools we covered to serve your quantitative analysis purpose. Each team wants to prepare a **30-min** presentation that covers both the source code and slides.
 
 @xiaobinwang0
 Focus on the stock you pick and their competitors. Report summary statistics of the training period you select and visualize the kernel density. You may use the 10+ sample code shared in Lecture 1 for reference
