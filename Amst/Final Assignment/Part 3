@@ -1,67 +1,64 @@
-# Required Libraries
 import numpy as np
 import pandas as pd
-import sklearn.linear_model as skl
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
-from xgboost import XGBRegressor
-from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
-import statsmodels.api as sm
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import Ridge, Lasso, ElasticNet, Lars
+from sklearn.preprocessing import StandardScaler
 
-# Load Data
-df = pd.read_csv('./featurePrepared.csv').dropna().set_index('Date')
+# Load data
+df = pd.read_csv("featurePrepared.csv")  # Update the file path as needed
+df = df.dropna()  # Drop missing values
 
-# Z-score normalization
-from scipy.stats import zscore
-df_nor = pd.DataFrame(zscore(df), columns=df.columns)
+# Define features (X) and target (y)
+y = df['NVDA']  # Replace 'NVDA' with your target column name
+X = df.drop(columns=['NVDA'], axis=1)  # Exclude the target column
 
-# Split the data
-y = df['NVDA']  # Target variable
-X = df.drop(['NVDA'], axis=1)  # Features
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Standardize the features for regression-based models
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Split data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
 # Ridge Regression
-ridge_model = skl.Ridge(alpha=0.5, fit_intercept=True).fit(X_train, y_train)
-ridge_features = pd.Series(ridge_model.coef_, index=X.columns)
-print("Ridge Selected Features:")
-print(ridge_features[ridge_features.abs() > 0.01])
+ridge = Ridge(alpha=1.0)
+ridge.fit(X_train, y_train)
+ridge_coef = ridge.coef_
 
 # LASSO Regression
-lasso_model = skl.Lasso(alpha=0.5, fit_intercept=True).fit(X_train, y_train)
-lasso_features = pd.Series(lasso_model.coef_, index=X.columns)
-print("\nLASSO Selected Features:")
-print(lasso_features[lasso_features.abs() > 0.01])
+lasso = Lasso(alpha=0.01)
+lasso.fit(X_train, y_train)
+lasso_coef = lasso.coef_
 
 # Elastic Net
-elastic_net_model = skl.ElasticNet(alpha=0.5, l1_ratio=0.5, fit_intercept=True).fit(X_train, y_train)
-elastic_net_features = pd.Series(elastic_net_model.coef_, index=X.columns)
-print("\nElastic Net Selected Features:")
-print(elastic_net_features[elastic_net_features.abs() > 0.01])
+elastic_net = ElasticNet(alpha=0.01, l1_ratio=0.5)  # l1_ratio balances LASSO and Ridge
+elastic_net.fit(X_train, y_train)
+elastic_net_coef = elastic_net.coef_
 
-# Least Angle Regression (LARS)
-lars_model = skl.Lars().fit(X_train, y_train)
-lars_features = pd.Series(lars_model.coef_, index=X.columns)
-print("\nLARS Selected Features:")
-print(lars_features[lars_features.abs() > 0.01])
+# LARS Regression
+lars = Lars(n_nonzero_coefs=10)  # Set the max number of features selected
+lars.fit(X_train, y_train)
+lars_coef = lars.coef_
 
-# Random Forest for Feature Importance
-rf_model = RandomForestRegressor(random_state=42)
-rf_model.fit(X_train, y_train)
-rf_importances = pd.Series(rf_model.feature_importances_, index=X.columns).sort_values(ascending=False)
+# Visualize the coefficients of each regression model
+plt.figure(figsize=(10, 6))
+features = X.columns
 
-# XGBoost for Feature Importance
-xgb_model = XGBRegressor(random_state=42)
-xgb_model.fit(X_train, y_train)
-xgb_importances = pd.Series(xgb_model.feature_importances_, index=X.columns).sort_values(ascending=False)
+plt.bar(features, ridge_coef, alpha=0.6, label='Ridge')
+plt.bar(features, lasso_coef, alpha=0.6, label='LASSO')
+plt.bar(features, elastic_net_coef, alpha=0.6, label='Elastic Net')
+plt.bar(features, lars_coef, alpha=0.6, label='LARS')
 
-# Plotting Feature Importances
-plt.figure(figsize=(12, 6))
-plt.bar(rf_importances.index, rf_importances.values, alpha=0.7, label="Random Forest")
-plt.bar(xgb_importances.index, xgb_importances.values, alpha=0.5, label="XGBoost")
-plt.title("Feature Importance - Random Forest and XGBoost")
-plt.xticks(rotation=90)
-plt.ylabel("Importance Score")
+plt.xticks(rotation=45, ha='right')
+plt.ylabel("Coefficient Values")
+plt.xlabel("Features")
+plt.title("Feature Importance - Regression-Based Models")
 plt.legend()
 plt.tight_layout()
 plt.show()
+
+# Print selected features for each model
+print("Ridge Selected Features:", [features[i] for i in range(len(ridge_coef)) if ridge_coef[i] != 0])
+print("LASSO Selected Features:", [features[i] for i in range(len(lasso_coef)) if lasso_coef[i] != 0])
+print("Elastic Net Selected Features:", [features[i] for i in range(len(elastic_net_coef)) if elastic_net_coef[i] != 0])
+print("LARS Selected Features:", [features[i] for i in range(len(lars_coef)) if lars_coef[i] != 0])
