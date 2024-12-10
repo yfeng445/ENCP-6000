@@ -1,0 +1,67 @@
+# Required Libraries
+import numpy as np
+import pandas as pd
+import sklearn.linear_model as skl
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from xgboost import XGBRegressor
+from sklearn.metrics import mean_squared_error
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+
+# Load Data
+df = pd.read_csv('./featurePrepared.csv').dropna().set_index('Date')
+
+# Z-score normalization
+from scipy.stats import zscore
+df_nor = pd.DataFrame(zscore(df), columns=df.columns)
+
+# Split the data
+y = df['NVDA']  # Target variable
+X = df.drop(['NVDA'], axis=1)  # Features
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Ridge Regression
+ridge_model = skl.Ridge(alpha=0.5, fit_intercept=True).fit(X_train, y_train)
+ridge_features = pd.Series(ridge_model.coef_, index=X.columns)
+print("Ridge Selected Features:")
+print(ridge_features[ridge_features.abs() > 0.01])
+
+# LASSO Regression
+lasso_model = skl.Lasso(alpha=0.5, fit_intercept=True).fit(X_train, y_train)
+lasso_features = pd.Series(lasso_model.coef_, index=X.columns)
+print("\nLASSO Selected Features:")
+print(lasso_features[lasso_features.abs() > 0.01])
+
+# Elastic Net
+elastic_net_model = skl.ElasticNet(alpha=0.5, l1_ratio=0.5, fit_intercept=True).fit(X_train, y_train)
+elastic_net_features = pd.Series(elastic_net_model.coef_, index=X.columns)
+print("\nElastic Net Selected Features:")
+print(elastic_net_features[elastic_net_features.abs() > 0.01])
+
+# Least Angle Regression (LARS)
+lars_model = skl.Lars().fit(X_train, y_train)
+lars_features = pd.Series(lars_model.coef_, index=X.columns)
+print("\nLARS Selected Features:")
+print(lars_features[lars_features.abs() > 0.01])
+
+# Random Forest for Feature Importance
+rf_model = RandomForestRegressor(random_state=42)
+rf_model.fit(X_train, y_train)
+rf_importances = pd.Series(rf_model.feature_importances_, index=X.columns).sort_values(ascending=False)
+
+# XGBoost for Feature Importance
+xgb_model = XGBRegressor(random_state=42)
+xgb_model.fit(X_train, y_train)
+xgb_importances = pd.Series(xgb_model.feature_importances_, index=X.columns).sort_values(ascending=False)
+
+# Plotting Feature Importances
+plt.figure(figsize=(12, 6))
+plt.bar(rf_importances.index, rf_importances.values, alpha=0.7, label="Random Forest")
+plt.bar(xgb_importances.index, xgb_importances.values, alpha=0.5, label="XGBoost")
+plt.title("Feature Importance - Random Forest and XGBoost")
+plt.xticks(rotation=90)
+plt.ylabel("Importance Score")
+plt.legend()
+plt.tight_layout()
+plt.show()
